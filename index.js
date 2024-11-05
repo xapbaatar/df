@@ -11,6 +11,9 @@ const content = [
     ],
     [
       "Зохиогч Б.Чинзоригт"
+    ],
+    [
+      "Гала хамтлагын гишүүн Галбадрах"
     ]
   ];
   
@@ -18,6 +21,7 @@ const content = [
   const btnCoreFeature = document.getElementById("btn-core-features");
   const btnResources = document.getElementById("btn-resources");
   const btnAbout = document.getElementById("btn-about");
+  const btnGala = document.getElementById("btn-gala");
   const tabContent = document.getElementById("tab-content");
   
   function displayContent(items) {
@@ -37,6 +41,7 @@ const content = [
     btnCoreFeature.className = "";
     btnResources.className = "";
     btnAbout.className = "";
+    btnGala.className = "";
     btn.className = "active"; // set new style / highlight
   }
   
@@ -52,7 +57,10 @@ const content = [
     }  
     if (btnId === "btn-about") {
       displayContent(content[3]);
-    }    
+    }   
+    if (btnId === "btn-gala") {
+      displayContent(content[4]);
+    }     
   }
   
   displayContent(content[0]); // initially show this content
@@ -61,4 +69,5 @@ const content = [
   btnCoreFeature.addEventListener("click", handleClick);
   btnResources.addEventListener("click", handleClick);
   btnAbout.addEventListener("click", handleClick);
+  btnGala.addEventListener("click", handleClick);
   

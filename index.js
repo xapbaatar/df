@@ -8,12 +8,16 @@ const content = [
        ],
     [
       "Кибер халдлага зөрчилтэй тэмцэх Үндэсний төвийн кибер халдлага, зөрчил, хортой кодын шинжилгээ хийх үйл ажиллагаанд дэмжлэг үзүүлэх"
+    ],
+    [
+      "Зохиогч Б.Чинзоригт"
     ]
   ];
   
   const btnWhyReact = document.getElementById("btn-why-react");
   const btnCoreFeature = document.getElementById("btn-core-features");
   const btnResources = document.getElementById("btn-resources");
+  const btnAbout = document.getElementById("btn-about");
   const tabContent = document.getElementById("tab-content");
   
   function displayContent(items) {
@@ -32,6 +36,7 @@ const content = [
     btnWhyReact.className = "";
     btnCoreFeature.className = "";
     btnResources.className = "";
+    btnAbout.className = "";
     btn.className = "active"; // set new style / highlight
   }
   
@@ -44,7 +49,10 @@ const content = [
       displayContent(content[1]);
     } else {
       displayContent(content[2]);
-    }
+    }  
+    if (btnId === "btn-about") {
+      displayContent(content[3]);
+    }    
   }
   
   displayContent(content[0]); // initially show this content
@@ -52,4 +60,5 @@ const content = [
   btnWhyReact.addEventListener("click", handleClick);
   btnCoreFeature.addEventListener("click", handleClick);
   btnResources.addEventListener("click", handleClick);
+  btnAbout.addEventListener("click", handleClick);
   
